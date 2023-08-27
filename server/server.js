@@ -1,5 +1,7 @@
 const express = require("express");
+const cors = require('cors')
 const app = express();
+app.use(cors());
 const { v4: uuidv4 } = require("uuid");
 
 let products = [
@@ -270,10 +272,6 @@ let products = [
     },
   },
 ];
-
-const categoryProducts = (category) =>{
-    
-}
 
 
 app.get("/products", (req, res) => {

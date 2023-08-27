@@ -1,0 +1,12 @@
+.product-card{
+    flex-shrink: 0;
+    width: 250px;
+    height: 350px;
+    padding: 8px;
+}
+
+.product-card img{
+    width: 80%;
+    height: 50%;
+    object-fit: contain;
+}
