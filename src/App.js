@@ -15,13 +15,13 @@ function App() {
   const [jewelery, setJewelery] = React.useState([]);
   const [mensClothing, setMensClothing] = React.useState([]);
   const [womensClothing, setWomensClothing] = React.useState([]);
-  const [allProducts, setAllProducts] = React.useState([]);
+  // const [allProducts, setAllProducts] = React.useState([]);
 
-  const fetchAllProducts = async () => {
-    const res = await fetch("http://localhost:5000/products");
-    const data = await res.json();
-    setAllProducts(data);
-  }
+  // const fetchAllProducts = async () => {
+  //   const res = await fetch("http://localhost:5000/products");
+  //   const data = await res.json();
+  //   setAllProducts(data);
+  // }
 
   const fetchJewelery = async () => {
     const res = await fetch("http://localhost:5000/products/category/jewelery");
@@ -52,7 +52,7 @@ function App() {
     fetchJewelery();
     fetchMensClothing();
     fetchWomensClothing();
-    fetchAllProducts();
+    // fetchAllProducts();
   }, []);
 
   
