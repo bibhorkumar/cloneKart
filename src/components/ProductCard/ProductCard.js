@@ -7,10 +7,6 @@ import { Link } from "react-router-dom";
 export default function ProductCard({ product }) {
   // console.log(product);
 
-  const productDetails = () => {
-    window.open("https://www.flipkart.com", "_blank");
-  };
-
   return (
     <>
       <CardActionArea>

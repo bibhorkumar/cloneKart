@@ -3,8 +3,6 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Categories from "./components/Categories";
 import CarouselFunc from "./components/Carousel/Carousel";
-import ProductCard from "./components/ProductCard/ProductCard";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CategoryCard from "./components/CategoryCard/CategoryCard";
 import { Routes, Route } from "react-router-dom";
