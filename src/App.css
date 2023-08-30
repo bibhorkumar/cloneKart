@@ -3,28 +3,5 @@
   background-color: whitesmoke;
 }
 
-.category-card{
-  margin: 16px 8px;
-  padding: 8px;
-  background: white;
-}
-
-.category-products-card{
-  display: flex;
-  overflow: auto;
-  gap: 8px;
-  padding: 8px;
-}
-
-/* hide scrollbar from chrome */
-.category-products-card::-webkit-scrollbar{
-  display: none;
-}
-
-/* hide scrollbar from edge, firefox */
-.category-products-card{
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
 
 
