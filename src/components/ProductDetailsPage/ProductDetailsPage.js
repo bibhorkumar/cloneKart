@@ -12,18 +12,26 @@ import SellRoundedIcon from '@mui/icons-material/SellRounded';
 
 export const ProductDetailsPage = () => {
   const param = useParams();
-  const [allProducts, setAllProducts] = React.useState([]);
+  //const [allProducts, setAllProducts] = React.useState([]);
   const [product, setProduct] = React.useState([]);
 
-  React.useEffect(()=>{
-    fetch("http://localhost:5000/products")
-    .then(res=>res.json())
-    .then(data=>setAllProducts(data));
-  },[])
+
+  // React.useEffect(()=>{
+  //   fetch("http://localhost:5000/products")
+  //   .then(res=>res.json())
+  //   .then(data=>setAllProducts(data));
+    
+  // },[])
 
   React.useEffect(()=>{
-    setProduct(allProducts.filter((item)=> item.id === param.productId));
-  },[allProducts,param])
+    fetch(`http://localhost:5000/products/${param.productId}`)
+    .then(res=> res.json())
+    .then(data=> setProduct(data))
+  },[param])
+
+  // React.useEffect(()=>{
+  //   setProduct(allProducts.filter((item)=> item.id === param.productId));
+  // },[allProducts,param])
 
   // const prod = allProducts.filter((item)=> item.id === param.productId); //less efficient way
   const ColorButton = styled(Button)(({ theme }) => ({

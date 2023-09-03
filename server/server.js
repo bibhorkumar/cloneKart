@@ -278,6 +278,13 @@ app.get("/products", (req, res) => {
   res.send(res.json(products));
 });
 
+app.get("/products/:id",(req,res)=> {
+  const {id}= req.params;
+  const requiredProduct = products.filter((item)=> item.id === id)
+  
+  res.send(requiredProduct);
+})
+
 app.get("/products/category/electronics",(req,res)=>{
     const electronics= products.filter(item =>{
         return item.category === 'electronics';
